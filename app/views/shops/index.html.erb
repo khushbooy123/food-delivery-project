@@ -1,0 +1,89 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Food Center</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('https://i.pinimg.com/736x/49/1a/92/491a924f10d7988a9ab2d3ff4f7121c8.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-dark font-weight-bold">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+   <P>
+<%= link_to "Back To Home",  owner_index_path, class: "text-white text-decoration-none btn btn-secondary" %>
+</p>
+  </div>
+  
+  
+  <div class="w3-display-middle">
+  
+  <p>Food Categories<p>
+
+  <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Veg</th>
+      <th scope="col">Non-Veg</th>
+      <th scope="col">sweet</th>
+      <th scope="col">Chinese</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>matar-panir</td>
+      <td>tanduri chicken</td>
+      <td>gulab jamun</td>
+      <td>nudels</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>dal-bati</td>
+      <td>chicken-biryani</td>
+      <td>milk cake</td>
+      <td>momos</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>pulaw</td>
+      
+      <td>chicken-65</td>
+      <td>berfi</td>
+      <td>pasta</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+    
+  </div>
+    
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    <%= link_to " log out", destroy_user_session_path, method: :delete , class: "nav-item m-3 text-white text-decoration-none btn btn-danger"%>
+  </div>
+</div>
+
+</body>
+</html>
+
+
