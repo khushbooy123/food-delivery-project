@@ -11,13 +11,7 @@ class ApplicationController < ActionController::Base
         root_path
       end
     end
-    # def after_sign_in_path_for(resource)
-    #   if resource.is_admin?
-    #     redirect_to admin_path
-    #   else
-    #     redirect_to user_path
-    #   end
-    # end
+    
    
    def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) do |user|
