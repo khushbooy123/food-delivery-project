@@ -1,0 +1,21 @@
+<div class="card" style="width: 18rem;">
+  <%= image_tag food.image if food.image.attached? %>
+  <%# <img class="card-img-top" src="..." alt="Card image cap"> %>
+  <%# <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div> %>
+  
+  <div id="<%= dom_id food %>">
+    <p>
+      <strong>Name:</strong>
+      <%= food.name %>
+    </p>
+
+    <p>
+      <strong>Price:</strong>
+      <%= food.price %>
+    </p>
+
+    </div>
+</div>
