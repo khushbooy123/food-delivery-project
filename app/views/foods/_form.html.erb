@@ -20,7 +20,13 @@
     <%= form.label :price, style: "display: block" %>
     <%= form.number_field :price %>
   </div>
-
+ 
+ <div>
+  <% array = Category.all.map { |category| [category.name, category.id] } %>
+  <%= form.label :category %>
+  <%= select_tag "food[category_ids][]", options_for_select(array),{include_blank: true } %>
+</div>
+ 
   <div>
     <%= form.label :image, style: "display: block" %>
     <%= form.file_field :image %>
@@ -30,3 +36,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+
