@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :foods
+  get '/search', to:'foods#search'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   

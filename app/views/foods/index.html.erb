@@ -1,18 +1,24 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Foods</h1>
+ 
 
-<div id="foods">
+
+<div id="foods" class="row">
   <% @foods.each do |food| %>
-    
-    <%= render food %>
-   <div class="card-body card-link">
-    <%= link_to "Show this food", food %> 
-  </div> 
+      <div class="card-body card-link col col-md-4">
+        <%= render food %>
+        <%= link_to "Show this food", food %>
+      </div>
   <% end %>
 </div>
-<%= link_to "New food", new_food_path, class: "text-white text-decoration-none btn btn-secondary" %><br/><br/>
+
+
+
+<br/>
 
 <P>
+<%= link_to "Add New Food", new_food_path, class: "text-white text-decoration-none btn btn-secondary" %>
 <%= link_to "Back To Home",  owner_index_path, class: "text-white text-decoration-none mt-6 btn btn-secondary" %>
 </p>
+
