@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
 body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
+/* body, html {height: 100%} */
 .bgimg {
   background-image: url('https://i.pinimg.com/736x/49/1a/92/491a924f10d7988a9ab2d3ff4f7121c8.jpg');
   min-height: 100%;
@@ -24,21 +24,38 @@ body, html {height: 100%}
 <body>
 
 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-dark font-weight-bold">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+<%# <div class="bgimg w3-display-container w3-animate-opacity w3-text-dark font-weight-bold"> %>
+  <div class="w3-display-botomright w3-padding-large w3-xlarge">
    <P>
 <%= link_to "Back To Home",  owner_index_path, class: "text-white text-decoration-none btn btn-secondary" %>
-</p>
+
+
+    <%= link_to " log out", destroy_user_session_path, method: :delete , class: "nav-item m-3 text-white text-decoration-none btn btn-danger"%>
+  </p>
   </div>
-  
+  <div class=" row col">
+             
+                <% @shops.each do |shop| %>
+                    <div class="card w-25">
+                    <div class="card-body card text-dark ">
+                    
+                        <h4><%= shop.ShopName%></h4>
+                        <p >Owner: <%= shop.name %></p>
+                        <p >OpeningTime: <%= shop.OpeningTime %></p>
+                        <p >ClosingTime: <%= shop.ClosingTime %></p>
+                        <p >Status: <%= shop.Status %></p>
+                        <%= link_to "Show this shop", shop, class: " text-white m-3 text-decoration-none btn btn-secondary"%>
+             
+                    </div>
+                    </div>
+                 <%end %>
+            </div>
   
   
 
     
   </div>
-  <div class="w3-display-bottomleft w3-padding-large">
-    <%= link_to " log out", destroy_user_session_path, method: :delete , class: "nav-item m-3 text-white text-decoration-none btn btn-danger"%>
-  </div>
+ 
 </div>
 
 </body>
