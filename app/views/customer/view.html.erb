@@ -1,7 +1,4 @@
 
-
-
-
 <div class="w3-container w3-padding-64  " id="shop">
             
              <div class="row col">
@@ -10,19 +7,11 @@
                     <div class="card w-25">
                     <div class="card-body  text-dark ">
                      <%= render food %>
-                     <%= link_to "Show this food", food %>
                     </div>
                     
                     </div>
                 <%end %>
             </div>
-    
+    <%= link_to "back", customer_index_path, class: "m-4 text-white text-decoration-none btn btn-secondary" %>
+            
         </div>
-
-<br/>
-
-<P>
-<%= link_to "Add New Food", new_food_path, class: "text-white text-decoration-none btn btn-secondary" %>
-<%= link_to "Back To Home",  owner_index_path, class: "text-white text-decoration-none mt-6 btn btn-secondary" %>
-</p>
-

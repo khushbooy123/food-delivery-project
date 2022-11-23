@@ -562,6 +562,7 @@ nav .profile-details i{
             <div class="row col">
              
                 <% @shops.each do |shop| %>
+                 <% if shop.user == current_user%>
                     <div class="card w-25">
                     <div class="card-body card text-dark ">
                     
@@ -574,6 +575,7 @@ nav .profile-details i{
                     </div>
                     </div>
                  <%end %>
+                 <%end%>
             </div>
 
             <div class="button">

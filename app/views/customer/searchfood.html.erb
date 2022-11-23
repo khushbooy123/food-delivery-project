@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Food Shop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     </head>
+    <body >
+         <div class="topleft m-2">
+            <%= link_to "Back To Home",  customer_index_path, class: "text-white text-decoration-none btn btn-secondary" %>
+        </div>
+        <div class="row justify-content-center w3-padding-64">
+            <div class="col-md-4 col-md-offset-6">
+                <% if @food.present? %>
+                    <%= render @food %>
+                <%else%>
+                    <h1>Ooops!!!!!</h1>
+                    <h3>Not Available right now<h3>
+                    
+                <%end%>
+                <br/>
+               
+            </div>
+        </div>
+    </body>
+</html>
